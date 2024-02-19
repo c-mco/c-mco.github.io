@@ -147,6 +147,10 @@ nav a:hover,
   color: var(--xanthous);
 }
 
+nav li:first-child i {
+  animation: rotateHue 5s infinite linear;
+}
+
 /* footer section */
 footer {
   text-align: center;
