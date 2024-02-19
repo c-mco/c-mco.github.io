@@ -1,0 +1,296 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --prussian-blue: #003049ff;
+  --fire-engine-red: #d62828ff;
+  --orange-wheel: #f77f00ff;
+  --xanthous: #fcbf49ff;
+  --vanilla: #eae2b7ff;
+  --black: #171321;
+  --dkblue: #2b3e4b;
+  --plum: #4b0d49;
+  --hotmag: #ff17e4;
+  --magenta: #e310cb;
+  --aqua: #86fbfb;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: Inconsolata, monospace;
+  --sans: Karla, sans-serif;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  background-color: var(--prussian-blue);
+  color: var(--vanilla);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  color: var(--orange-wheel);
+}
+a:hover {
+  color: var(--xanthous);
+  text-decoration: none;
+}
+
+/* intro styles */
+
+#intro {
+  padding: 4rem 1rem 6rem 1rem;
+  font-family: var(--mono);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.name span {
+  font-family: var(--sans);
+  font-size: 4rem;
+  color: var(--orange-wheel);
+  display: block;
+}
+#intro h2 {
+  font-family: var(--sans);
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+/* contact section */
+
+#contact {
+  color: var(--prussian-blue);
+  font-family: var(--mono);
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  margin: 0 auto;
+  width: 200px;
+}
+.contact {
+  background-color: var(--xanthous);
+}
+#contact h2 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+#contact p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#contact a {
+  color: var(--prussian-blue);
+  text-decoration: none;
+}
+/* nav bar */
+nav {
+  font-family: var(--mono);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--sans);
+  font-size: 3em;
+}
+nav h1 span {
+  font-size: 50%;
+}
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+[class*='fa-'] {
+  color: var(--vanilla);
+  font-size: 150%;
+}
+
+nav a {
+  color: var(--orange-wheel);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+[class*='fa-']:hover {
+  color: var(--xanthous);
+}
+
+/* footer section */
+footer {
+  text-align: center;
+  padding: 4rem 0;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+footer h2 {
+  color: var(--orange-wheel);
+}
+
+.button {
+  background-color: var(--fire-engine-red);
+  color: var(--prussian-blue);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+.button:hover {
+  background-color: var(--orange-wheel);
+  color: var(--prussian-blue);
+}
+
+/* project section */
+#projects {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem 6rem 1rem;
+
+}
+
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+  color: var(--orange-wheel);
+}
+h3 a {
+  text-decoration: none;
+}
+
+.bb {
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.tech {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  font-size: 1rem;
+}
+#intro.mini  {
+  background-color: #2b3e4b;
+  margin: auto;
+  padding: 1rem;
+  padding-right: 15%;
+  width: 100%;
+  border-left: 2px solid var(--orange-wheel);
+  border-top: 2px solid var(--orange-wheel);
+  border-radius: 25px;
+  filter: hue-rotate(120deg);
+  animation: rotateHue 5s infinite linear;
+}
+@keyframes rotateHue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@media (min-width: 550px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 1rem;
+  }
+  .mini {
+    grid-column: 1/6;
+    grid-row: 1/2;
+    z-index: 0;
+  }
+
+  .text {
+    order: 2;
+    text-align: right;
+    grid-column: 5/11;
+    grid-row: 1/2;
+    margin: auto;
+    z-index: 1;
+  }
+  .tech {
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
+
+.divider {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    90deg,
+    rgba(9, 9, 121, 1) 39%,
+    rgba(214, 40, 40, 1) 89%
+  );
+  height: 6px;
+  width: 100%;
+}
+
+.divider2 {
+  background: rgb(9, 9, 121);
+  background: linear-gradient(
+    270deg,
+    rgba(9, 9, 121, 1) 39%,
+    rgba(214, 40, 40, 1) 89%
+  );
+  height: 6px;
+  width: 100%;
+}
