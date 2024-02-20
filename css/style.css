@@ -90,7 +90,7 @@ a:hover {
 }
 #contact h2 {
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 500;
 }
 
 #contact p {
@@ -285,7 +285,7 @@ h3 a {
     rgba(9, 9, 121, 1) 39%,
     rgba(214, 40, 40, 1) 89%
   );
-  height: 6px;
+  height: 4px;
   width: 100%;
 }
 
