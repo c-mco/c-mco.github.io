@@ -186,9 +186,7 @@ footer h2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4rem 1rem 6rem 1rem;
-
 }
-
 
 #projects h2 {
   font-size: 2.5rem;
@@ -220,7 +218,7 @@ h3 a {
   justify-content: flex-start;
   font-size: 1rem;
 }
-#intro.mini  {
+#intro.mini {
   background-color: #2b3e4b;
   margin: auto;
   padding: 1rem;
@@ -232,6 +230,9 @@ h3 a {
   filter: hue-rotate(120deg);
   animation: rotateHue 5s infinite linear;
 }
+#intro.mini a {
+  animation: rotationHueReverse 5s infinite linear;
+}
 
 @keyframes rotateHue {
   from {
@@ -239,6 +240,14 @@ h3 a {
   }
   to {
     filter: hue-rotate(360deg);
+  }
+}
+@keyframes rotateHue2 {
+  from {
+    filter: hue-rotate(190deg);
+  }
+  to {
+    filter: hue-rotate(-190deg);
   }
 }
 @media (min-width: 550px) {
