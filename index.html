@@ -75,7 +75,7 @@
         <h2>projects</h2>
         <article>
           <div class="text">
-            <h3><a href="index.html">This site!</a></h3>
+            <h3><a aria-label="a heading and link to the site we're on" href="index.html">This site!</a></h3>
             <p class="description bb">
               This is this page. After years of testing, I've finally got around
               to building my own website. I've learned a lot about existing,
@@ -117,7 +117,14 @@
       <section id="contact">
         <h2>contact me</h2>
         <p>I love to chat. Let's grab a beer some time!</p>
-        <p><a class="button" href="mailto:cam@camcamcam.cam">💌</a></p>
+        <div class="contact-icon">
+          <a href="mailto:cam@camcamcam.cam">
+            <span class="fas fa-envelope" aria-hidden="true">
+              <span class="sr-only">Email</span>
+
+            </span>
+          </a>
+        </div>
       </section>
       <div class="divider"></div>
     </div>
@@ -138,7 +145,7 @@
           </a>
         </li>
         <li>
-          <a href="mailto:cam@camcamca.cam">
+          <a href="mailto:cam@camcamcam.cam">
             <span class="fas fa-envelope" aria-hidden="true"></span>
             <span class="sr-only">Email</span>
           </a>
